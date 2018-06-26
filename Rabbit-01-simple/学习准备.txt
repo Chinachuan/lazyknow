@@ -1,0 +1,7 @@
+1.安装RabbitMQ支持 otp_win64_20.3.exe
+2.安装RabbitMQ服务 rabbitmq-server-3.7.6.exe
+3.打开cmd,进入到D:\rabbitmq\install\rabbitmq_server-3.7.6\sbin文件夹下
+  运行rabbitmq-plugins enable rabbitmq_management
+4.然后重启服务即可
+5.http://localhost:15672 访问该路径，然后登录，用户名guest,密码guest
+6.添加一个用户，创建一个“数据库”，然后添加权限即可。
