@@ -1,0 +1,25 @@
+1.在本地桌面或者其他地方创建一个文件夹
+2.初始化这个文件夹，执行命令：git init
+
+3.修改配置文件，创建一个连接，例如
+  git config --global user.name "China***"
+  git config --global user.email "666666@qq.com"
+  git config --list  #查看配置文件的信息
+
+4.克隆一个GitHub上的项目，执行命令：
+  git clone https://github.com/China***/test***Git.git
+
+5.创建一个测试文件：touch test01.txt
+6.在文件中添加一个信息：vi test01.txt
+
+7.开始上传到GitHub项目中
+(1)git status  #查看当前文件的状态
+(2)git add test01.txt  #添加到文件到暂存区中
+(3)git reset test01.txt  #从暂存区中撤回，一般不用这个命令
+(4)git status  #查看当前文件的状态
+(5)git commit -m "这是提交的备注说明"    #提交信息并添加备注
+(6)git push  #从暂存区提交到git仓库中
+
+8.删除操作(当git的状态为deleted时)
+(1)git rm --cached "文件路径"，#不删除物理文件，仅将该文件从缓存中删除；
+(2)git rm --f "文件路径"， #不仅将该文件从缓存中删除，还会将物理文件删除（不会回收到垃圾桶）
