@@ -31,3 +31,50 @@
 (4)lssues 给项目的创建者提一些建议
 (5)pull requests 修改代码提交给原创建者
 (6)Setting 设置，可以管理删除项目
+
+10.Git查看版本日志
+(1)git log  #查看版本
+(2)git log --stat  #查看版本
+(3)git log --pretty=oneline  #每个版本信息简化一行展示
+(4)git log --oneline  #每个版本信息简化一行展示
+(5)git reflog  #显示版本的指针日志，HEAD表示移动到某个版本需要的步数
+
+11.版本前进后退的三种方式
+(1)基于HEAD索引值操作 [推荐使用] eg：git reset --hard [版本号]  #通过版本号返回到指定版本
+(2)使用^符号，只能后退  eg：git reset --hard HEAD^^^  #一个^符号代表回退一个版本，3个代表回退3个版本，n个代表回退n个 
+(3)使用~符号，只能后退  eg：git reset --hard HEAD~3  #数字几就代表回退几个版本 
+
+12.Git reset 的使用
+(1)git reset --soft  #仅仅在本地库移动HEAD指针
+(2)git reset --mixed  #在本地库移动HEAD指针,重置暂存区
+(3)git reset --hard  #在本地库移动HEAD指针,重置暂存区和工作区
+
+13.文件比较
+(1)git diff apple.txt  #和本地库比较文件修改前后的变化
+(2)git diff HEAD apple.txt  #例：本地库比较上一个版本文件修改前后的变化
+(3)git diff HEAD^ apple.txt  #例：本地库比较上一个版本文件修改前后的变化
+
+14.分支管理
+(1)git branch -v  #查看分支
+(2)git branch hot_fix  #创建一个名称为hot_fix的分支
+(3)git cheakout hot_fix  #切换到hot_fix分支
+
+15.合并分支
+(1)第一步:切换到接受修改的分支 eg: git checkout [分支名] 
+   例如，分支A修改了一个文件，分支B要同步分支A修改的文件，这时候，就要切换到分支B上
+(2)第二步：执行merge命令
+   eg：git merge [分支名]  #那第一步举例，这个分支名，就是分支A
+   
+16.解决分支冲突
+(1)编辑文件，删除特殊符合
+(2)把文件修改到满意程度，保存退出
+(3)git add [文件名]
+(4)git commit -m "备注信息"  #后面不加文件名
+
+
+
+
+
+
+
+
